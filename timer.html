@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer - Focus Mode</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <h1 class="logo">Focus Mode</h1>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="timer.html" class="nav-link active">Timer</a></li>
+                <li><a href="statistics.html" class="nav-link">Statistics</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container timer-container">
+        <section class="timer-section">
+            <div class="mode-display">
+                <p class="mode-label" id="modeLabel">Focus Time</p>
+            </div>
+
+            <div class="timer-display">
+                <div class="circular-timer">
+                    <svg class="progress-ring" width="300" height="300">
+                        <circle class="progress-ring-bg" cx="150" cy="150" r="140" />
+                        <circle class="progress-ring-circle" cx="150" cy="150" r="140" id="progressCircle" />
+                    </svg>
+                    <div class="timer-text">
+                        <div class="time" id="timerDisplay">25:00</div>
+                        <p class="timer-status" id="timerStatus">Ready to start</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timer-controls">
+                <button class="control-btn start-btn" id="startBtn">Start</button>
+                <button class="control-btn pause-btn" id="pauseBtn" disabled>Pause</button>
+                <button class="control-btn reset-btn" id="resetBtn">Reset</button>
+            </div>
+
+            <div class="session-info">
+                <div class="info-item">
+                    <label>Sessions Completed Today</label>
+                    <p class="info-value" id="sessionsCount">0</p>
+                </div>
+                <div class="info-item">
+                    <label>Total Focus Time</label>
+                    <p class="info-value" id="totalTime">0h 0m</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Focus Mode - Your Study Companion. All rights reserved.</p>
+    </footer>
+
+    <script src="timer.js"></script>
+</body>
+</html>
