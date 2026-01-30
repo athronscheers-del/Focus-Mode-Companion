@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics - Focus Mode</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <h1 class="logo">Focus Mode</h1>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="timer.html" class="nav-link">Timer</a></li>
+                <li><a href="statistics.html" class="nav-link active">Statistics</a></li>
+                <li><a href="aboutus.html" class="nav-link">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container stats-container">
+        <section class="stats-section">
+            <h2>Your Study Statistics</h2>
+
+            <div class="stats-grid">
+                <article class="stat-card">
+                    <h3>Total Sessions</h3>
+                    <p class="stat-value" id="totalSessions">0</p>
+                    <p class="stat-label">sessions completed</p>
+                </article>
+                <article class="stat-card">
+                    <h3>Total Focus Time</h3>
+                    <p class="stat-value" id="totalFocusTime">0h</p>
+                    <p class="stat-label">hours of focused study</p>
+                </article>
+                <article class="stat-card">
+                    <h3>Today's Sessions</h3>
+                    <p class="stat-value" id="todaySessions">0</p>
+                    <p class="stat-label">sessions today</p>
+                </article>
+                <article class="stat-card">
+                    <h3>Streak Days</h3>
+                    <p class="stat-value" id="streakDays">0</p>
+                    <p class="stat-label">consecutive days</p>
+                </article>
+            </div>
+
+            <section class="history-section">
+                <h3>Session History</h3>
+                <div class="session-list" id="sessionList">
+                    <p class="empty-state">No sessions recorded yet. Start your first session!</p>
+                </div>
+            </section>
+
+            <div class="actions">
+                <button class="clear-btn" id="clearDataBtn">Clear All Data</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Focus Mode - Your Study Companion. All rights reserved.</p>
+    </footer>
+
+    <script src="statistics.js"></script>
+</body>
+</html>
