@@ -20,6 +20,46 @@
     </header>
 
     <main class="container timer-container">
+        <section class="user-profile-section">
+            <div class="profile-card">
+                <div class="profile-header">
+                    <h2>Welcome Back! 👋</h2>
+                    <button class="edit-profile-btn" id="editProfileBtn">Edit Profile</button>
+                </div>
+                <div class="profile-info">
+                    <div class="profile-item">
+                        <span class="label">Name:</span>
+                        <span class="value" id="userName">Not set</span>
+                    </div>
+                    <div class="profile-item">
+                        <span class="label">Email:</span>
+                        <span class="value" id="userEmail">Not set</span>
+                    </div>
+                    <div class="profile-item">
+                        <span class="label">Current Streak:</span>
+                        <span class="value streak" id="currentStreak">0 days 🔥</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="goal-card">
+                <h3>Weekly Goal 🎯</h3>
+                <div class="goal-content">
+                    <div class="goal-input-group">
+                        <label>Target Sessions per Week:</label>
+                        <input type="number" id="weeklyGoal" min="1" max="70" placeholder="e.g., 35">
+                        <button class="save-goal-btn" id="saveGoalBtn">Save Goal</button>
+                    </div>
+                    <div class="goal-progress">
+                        <p class="goal-text">This Week: <span id="thisWeekSessions">0</span>/<span id="goalDisplay">0</span> sessions</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="goalProgressFill"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="timer-section">
             <div class="mode-display">
                 <p class="mode-label" id="modeLabel">Focus Time</p>
@@ -55,10 +95,31 @@
                 </div>
             </div>
         </section>
-                </div>
-            </div>
-        </section>
     </main>
+
+    <!-- Profile Modal -->
+    <div class="modal" id="profileModal" class="">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edit Your Profile</h2>
+                <button class="close-btn" id="closeModalBtn">&times;</button>
+            </div>
+            <form id="profileForm" class="profile-form">
+                <div class="form-group">
+                    <label for="inputName">Name:</label>
+                    <input type="text" id="inputName" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail">Email:</label>
+                    <input type="email" id="inputEmail" placeholder="Enter your email" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">Save Profile</button>
+                    <button type="button" class="btn-secondary" id="cancelModalBtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <footer class="footer">
         <p>&copy; 2026 Focus Mode - Your Study Companion. All rights reserved.</p>
